@@ -1,0 +1,94 @@
+/* * {
+    outline: 1px solid blue;
+} */
+
+body {
+    letter-spacing: -0.025em;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    line-height: 100px;
+    background: #fff;
+    transition: height 0.5s;
+}
+
+.Header:hover .Gnb .SubMenu,
+.Header:hover .Gnb>ul::after {
+    height: 130px;
+}
+
+.Header h1 {
+    font-size: 0px;
+}
+
+.Header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Header .Gnb>ul {
+    display: flex;
+    gap: 100px;
+}
+
+.Header .Gnb a {
+    display: block;
+}
+
+.Header .Gnb>ul>li {
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.Header .Gnb .SubMenu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background: #fff;
+    width: 160px;
+    height: 0px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 400;
+    overflow: hidden;
+    transition: height 0.5s;
+    z-index: 999;
+}
+
+.Header .Gnb>ul:hover .SubMenu {
+    height: 120px;
+}
+
+.Header .Gnb>ul::after {
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    background: #fff;
+    transition: height 0.5s;
+    z-index: 998;
+}
+
+.Header .Gnb>ul:hover::after {
+    height: 130px;
+}
+
+section {
+    height: 600px;
+}
+
+section:nth-child(odd) {
+    background: lightgray;
+}

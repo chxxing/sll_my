@@ -12,18 +12,20 @@ body {
 }
 
 .Header {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
     line-height: 100px;
     background: #fff;
-    transition: height 0.5s;
+    transition: 0.5s;
+    z-index: 999;
 }
 
-.Header:hover .Gnb .SubMenu,
-.Header:hover .Gnb>ul::after {
-    height: 130px;
+.Header.on {
+    position: fixed;
+    line-height: 70px;
+    border-bottom: 1px solid #ddd;
 }
 
 .Header h1 {
@@ -57,12 +59,16 @@ body {
     background: #fff;
     width: 160px;
     height: 0px;
-    line-height: 40px;
+    line-height: 35px;
     font-size: 16px;
     font-weight: 400;
     overflow: hidden;
     transition: height 0.5s;
     z-index: 999;
+}
+
+.Header.on .Gnb .SubMenu {
+    top: 60px;
 }
 
 .Header .Gnb>ul:hover .SubMenu {
@@ -81,14 +87,120 @@ body {
     z-index: 998;
 }
 
+.Header.on .Gnb>ul::after {
+    top: 60px;
+}
+
 .Header .Gnb>ul:hover::after {
     height: 130px;
 }
 
-section {
-    height: 600px;
+.Header .SubMenu>li:hover {
+    font-weight: 500;
 }
 
-section:nth-child(odd) {
-    background: lightgray;
+.Header .Gnb .lang {
+    position: relative;
+}
+
+.Header .Gnb .lang>a {
+    display: inline;
+    border: 1px solid #ddd;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.Header .Gnb .lang i {
+    font-size: 8px;
+    vertical-align: -0.05em;
+    margin: 0 0 0 8px;
+}
+
+.Header .lang .langMenu {
+    position: absolute;
+    display: none;
+    top: 64px;
+    left: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 5px 19px;
+}
+
+.Header.on .lang .langMenu {
+    top: 49px;
+}
+
+.Header .lang.on .langMenu {
+    display: block;
+    z-index: 999;
+}
+
+.Header .lang.on i {
+    transform: rotate(180deg);
+}
+
+.Header .lang .langMenu>li:hover {
+    font-weight: 500;
+}
+
+.MainVisual {
+    position: relative;
+}
+
+.MainVisual .MainSlider figure {
+    height: 700px;
+}
+
+.MainVisual .MainSlider .itm01 {
+    background: url(../img/mainvisual01.jpg) no-repeat center center/cover;
+}
+
+.MainVisual .MainSlider .itm02 {
+    background: url(../img/mainvisual02.jpg) no-repeat center center/cover;
+}
+
+.MainVisual .MainSlider .itm03 {
+    background: url(../img/mainvisual03.jpg) no-repeat center center/cover;
+}
+
+.MainVisual .MainSlider .itm04 {
+    background: url(../img/mainvisual04.jpg) no-repeat center center/cover;
+}
+
+.MainVisual .MainSlider .itm05 {
+    background: url(../img/mainvisual05.jpg) no-repeat center center/cover;
+}
+
+.MainVisual .MainSlider .itm06 {
+    background: url(../img/mainvisual06.jpg) no-repeat center center/cover;
+}
+
+.MainVisual .MainSlider .itm07 {
+    background: url(../img/mainvisual07.jpg) no-repeat center center/cover;
+}
+
+.MainVisual .Slogan {
+    position: absolute;
+    top: 67%;
+    left: calc((100% - 1200px)/2);
+    transform: translateY(-50%);
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+    z-index: 1;
+}
+
+.MainVisual .Slogan h2 {
+    font-size: 50px;
+    font-weight: 800;
+    margin: 0 0 15px 0;
+}
+
+.MainVisual .Slogan p {
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.3;
 }

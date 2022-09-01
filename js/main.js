@@ -13,13 +13,18 @@ window.addEventListener('DOMContentLoaded', () => {
             : document.querySelector('.Header').classList.remove('on')
     });
 
-    const MainSlider = new Swiper('.swiper', {
+    const MAIN = new Swiper('.swiper', {
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
         },
         loop: true,
         effect: "fade",
-        speed: 1000,
+        fadeEffect: {
+            crossFade: true
+        },
+        speed: 1500,
     });
+
+    AOS.init();
 });

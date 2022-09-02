@@ -41,4 +41,9 @@ window.addEventListener('DOMContentLoaded', () => {
             prevEl: ".swiper-button-prev",
         },
     });
+
+    document.querySelector('.Footer .Familyul').addEventListener('click', (e) => {
+        const FS = e.currentTarget;
+        FS.classList.toggle('on');
+    });
 });

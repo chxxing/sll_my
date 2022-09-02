@@ -225,7 +225,7 @@ body {
 
 .About .container {
     display: flex;
-    gap: 30px;
+    gap: 10px;
 }
 
 .About .container img {
@@ -282,10 +282,6 @@ body {
     text-align: center;
 }
 
-.Works .container {
-    width: 1240px;
-}
-
 .Works h2 {
     font-size: 40px;
     font-weight: 600;
@@ -340,12 +336,13 @@ body {
     visibility: hidden;
 }
 
-.Works .TabCont>li.active {
+.Works .TabCont>li.on {
     visibility: visible;
 }
 
 .Works .swiper-slide img {
-    height: 300px;
+    width: 100%;
+    height: 310px;
     margin: 0 0 20px 0;
 }
 

@@ -36,11 +36,35 @@ window.addEventListener('DOMContentLoaded', () => {
     const CONT = new Swiper('.ContentSlider', {
         loop: true,
         slidesPerView: 5,
+        spaceBetween: 10,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
     });
+
+    // const TM = document.querySelectorAll('.TabMenu li');
+    // const TC = document.querySelectorAll('.TabCont li');
+
+    // for (let i = 0; i < TM.length; i++) {
+    //     document.querySelector('.TabMenu li').addEventListener('click', (e) => {
+    //         if (e.target == document.querySelector(TM)[i]) {
+    //             TAB(i)
+    //         };
+    //     });
+    // };
+
+    // function TAB(i) {
+    //     TM.removeClass('on');
+    //     TC.removeClass('on');
+    //     TM.eq(i).addClass('on');
+    //     TC.eq(i).addClass('on');
+    // }
+
+
+
+
+
 
     document.querySelector('.Footer .Familyul').addEventListener('click', (e) => {
         const FS = e.currentTarget;

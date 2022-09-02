@@ -7,15 +7,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
         let SCR = window.scrollY;
-        console.log(SCR);
+        // console.log(SCR);
         SCR > 0
             ? document.querySelector('.Header').classList.add('on')
             : document.querySelector('.Header').classList.remove('on')
     });
 
-    const MAIN = new Swiper('.swiper', {
+    const MAIN = new Swiper('.MainSlider', {
         autoplay: {
-            delay: 3000,
+            delay: 2000,
             disableOnInteraction: false,
         },
         loop: true,
@@ -26,5 +26,19 @@ window.addEventListener('DOMContentLoaded', () => {
         speed: 1500,
     });
 
-    AOS.init();
+    AOS.init({
+        offset: 100,
+        delay: 10,
+        duration: 500,
+        easing: 'ease-out-quart',
+    });
+
+    const CONT = new Swiper('.ContentSlider', {
+        loop: true,
+        slidesPerView: 5,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
 });
